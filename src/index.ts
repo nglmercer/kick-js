@@ -1,5 +1,5 @@
 import { createClient } from "./client/client";
-import type { MessageData } from "./types/events.js";
+import type { MessageData, RawMessageHandler } from "./types/events.js";
 
 export { createClient };
-export type { MessageData };
+export type { MessageData, RawMessageHandler };

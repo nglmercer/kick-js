@@ -125,3 +125,6 @@ export interface PinnedMessageCreatedEvent {
   };
   duration: string;
 }
+
+// Event handler types for better type safety
+export type RawMessageHandler = (rawMessage: string) => void;

@@ -1,4 +1,5 @@
 import type { Channel, Livestream } from "./video";
+import type { RawMessageHandler } from "./events";
 
 export type EventHandler<T> = (data: T) => void;
 

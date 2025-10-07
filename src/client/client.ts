@@ -153,7 +153,12 @@ export const createClient = (
       });
 
       socket.on("message", (data: WebSocket.Data) => {
-        const parsedMessage = parseMessage(data.toString());
+        const rawMessage = data.toString();
+        
+        // Emit raw message first, before any processing
+        emitter.emit("rawMessage", rawMessage);
+        
+        const parsedMessage = parseMessage(rawMessage);
         if (parsedMessage) {
           switch (parsedMessage.type) {
             case "ChatMessage":
