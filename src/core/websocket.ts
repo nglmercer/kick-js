@@ -2,7 +2,7 @@ import WebSocket from "ws";
 import { URLSearchParams } from "url";
 
 const BASE_URL = "wss://ws-us2.pusher.com/app/32cbd69e4b950bf97679";
-
+//32cbd69e4b950bf97679
 export const createWebSocket = (chatroomId: number): WebSocket => {
   const urlParams = new URLSearchParams({
     protocol: "7",
